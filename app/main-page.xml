@@ -1,0 +1,26 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="page">
+
+	<Page.actionBar>
+		<ActionBar title="TheCrag Test" icon="" class="action-bar"></ActionBar>
+	</Page.actionBar>
+
+	<ScrollView>
+		<StackLayout class="p-20">
+			<!-- The Clicks -->
+			<Label text="Tap the button" class="h1 text-center"/>
+			<Button text="TAP" tap="{{ onTap }}" class="btn btn-primary btn-active"/>
+			<Label text="{{ message }}" class="h2 text-center" textWrap="true"/>
+
+			<!-- The Components -->
+			<Label text="Some Components" class="h1 text-center"/>
+			<Switch/>
+			<Slider maxValue="10" minValue="1"/>
+			<ListPicker items="{{ pokemonList }}"/>
+
+			<!-- The Links to he ListViewPage -->
+			<Label text="ListViews" class="h1 text-center"/>
+			<Button text="200 Items" tap="smallList" class="btn btn-primary"/>
+			<Button text="20000 Items" tap="largeList" class="btn btn-primary"/>
+		</StackLayout>
+	</ScrollView>
+</Page>
